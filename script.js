@@ -1,6 +1,9 @@
+
+
 $(() => {
     var word = "ATLANTA"
-    var wordArray = []
+
+
     var matchWordArray = word.split('')
     //var allLettersArray = [$(".A", ".B", ".C", ".D", ".E", ".F", ".G", ".H", ".I", ".J", ".K", ".L", ".M", ".N", ".O", ".P", ".Q", ".R", ".S", ".T", ".U", ".V", ".W", ".X", ".Y", ".Z").text()]
    
@@ -35,10 +38,18 @@ $(() => {
    if(life === 0){
        alert('get out my face loser')
    }
-    
+   
+//correct letters/win
+
+let letters = $('.userLetters').children().text()
+
+    if(letters === word){
+        alert("you win")
+    }  
+   
+
 })
 
-    $('.userLetters').html()
 
 
 });
