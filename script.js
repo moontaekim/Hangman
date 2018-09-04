@@ -1,45 +1,44 @@
 $(() => {
     var word = "ATLANTA"
-    var wordArray = word.split('')
-    // const correctLetters = () => {
-
-    //     //console.log(wordArray)
-    //     for(let i = 0; i < wordArray.length; i++){
-    //         //loop through letters in array
-    //         if(wordArray[i] = letterclicked)
-    //         //if letter clicked matches letter in loop
-    //         //call function that replaces class??
-    //     }
-    // }
+    var wordArray = []
+    var matchWordArray = word.split('')
+    //var allLettersArray = [$(".A", ".B", ".C", ".D", ".E", ".F", ".G", ".H", ".I", ".J", ".K", ".L", ".M", ".N", ".O", ".P", ".Q", ".R", ".S", ".T", ".U", ".V", ".W", ".X", ".Y", ".Z").text()]
+   
 //correct letters replacing userLetters
     $('.A').on('click', ()=>{
-        console.log('user selected A')
+        //console.log('user selected A')
         $('.firstLetter, .fourthLetter, .seventhLetter').replaceWith($('.A'));
+        
     })
     
     $('.T').on('click', ()=>{
-        console.log('user selected T')
+       // console.log('user selected T')
         $('.secondLetter, .sixthLetter').replaceWith($('.T'));
     })
     
     $('.L').on('click', ()=>{
-        console.log('user selected L')
+        //console.log('user selected L')
         $('.thirdLetter').replaceWith($('.L'));
     })
     
     $('.N').on('click', ()=>{
-        console.log('user selected N')
+       // console.log('user selected N')
         $('.fifthLetter').replaceWith($('.N'));
     })
 
+   
+
 //incorrect letters chosen
-    $('.B').on('click', ()=>{
-      var life = $('.life').text()
-    //console.log('user selected B')
-    $('.life').html(`${life -= 1}`)
+    $('.B, .C, .D, .E, .F, .G, .H, .I, .J, .K, .M, .O, .P, .Q, .R, .S, .U, .V, .W, .X, .Y, .Z').on('click', ()=>{
+    var life = $('.life').text()
+   var lose = $('.life').html(`${life -= 1}`)
+   if(life === 0){
+       alert('get out my face loser')
+   }
+    
 })
 
-    
+    $('.userLetters').html()
 
 
 });
