@@ -1,6 +1,4 @@
-html{
 
-}
 
 body{
     height: 100vh;
@@ -19,6 +17,12 @@ div.letters{
 
 .userLetters{
     display:grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 100%;
+}
+
+.countdown{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 100%;
 }
