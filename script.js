@@ -4,12 +4,23 @@ const createRandomCapitol = () => {
 
     const randomCapitolNumber = Math.floor(Math.random() * capitolArray.length)
     const randomCapitol = capitolArray[randomCapitolNumber]
-    console.log(randomCapitol)
+    return randomCapitol.split('')
+
     //$(`<div>${randomCapitol}</div>`).appendTo('.userLetters')
     //now add this capitolDiv to the HTML
 }   
 
-const capitol = createRandomCapitol()
+//createRandomCapitol()
+console.log(createRandomCapitol())
+
+var letterSelect = console.log(document.querySelector('.letterList').innerText.split(''))
+
+
+
+
+
+
+
 
 
 //var word = "ATLANTA"
@@ -17,8 +28,6 @@ const capitol = createRandomCapitol()
 $(() => {
    
 //correct letters replacing userLetters
-console.log('capitol')
-
 
 $('.A').on('click', ()=>{
         //console.log('user selected A')
