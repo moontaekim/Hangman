@@ -4,51 +4,64 @@ $(() => {
     var word = "ATLANTA"
 
 
-    var matchWordArray = word.split('')
+    //var matchWordArray = word.split('')
     //var allLettersArray = [$(".A", ".B", ".C", ".D", ".E", ".F", ".G", ".H", ".I", ".J", ".K", ".L", ".M", ".N", ".O", ".P", ".Q", ".R", ".S", ".T", ".U", ".V", ".W", ".X", ".Y", ".Z").text()]
    
 //correct letters replacing userLetters
-    $('.A').on('click', ()=>{
-        //console.log('user selected A')
-        $('.firstLetter, .fourthLetter, .seventhLetter').replaceWith($('.A'));
-        
-    })
-    
-    $('.T').on('click', ()=>{
-       // console.log('user selected T')
-        $('.secondLetter, .sixthLetter').replaceWith($('.T'));
-    })
-    
-    $('.L').on('click', ()=>{
-        //console.log('user selected L')
-        $('.thirdLetter').replaceWith($('.L'));
-    })
-    
-    $('.N').on('click', ()=>{
-       // console.log('user selected N')
-        $('.fifthLetter').replaceWith($('.N'));
-    })
 
+
+
+
+$('.A').on('click', ()=>{
+        //console.log('user selected A')
+    $('.firstLetter, .fourthLetter, .seventhLetter').replaceWith($('.A'));
+        
+})
+    
+$('.T').on('click', ()=>{
+       // console.log('user selected T')
+    $('.secondLetter, .sixthLetter').replaceWith($('.T'));
+    
+})
+    
+$('.L').on('click', ()=>{
+        //console.log('user selected L')
+    $('.thirdLetter').replaceWith($('.L'));
+    
+})
+    
+$('.N').on('click', ()=>{
+       // console.log('user selected N')
+     $('.fifthLetter').replaceWith($('.N'));
+    
+})
+
+    
    
 
 //incorrect letters chosen
-    $('.B, .C, .D, .E, .F, .G, .H, .I, .J, .K, .M, .O, .P, .Q, .R, .S, .U, .V, .W, .X, .Y, .Z').on('click', ()=>{
+$('.B, .C, .D, .E, .F, .G, .H, .I, .J, .K, .M, .O, .P, .Q, .R, .S, .U, .V, .W, .X, .Y, .Z').on('click', ()=>{
     var life = $('.life').text()
-   var lose = $('.life').html(`${life -= 1}`)
-   if(life === 0){
+    var lose = $('.life').html(`${life -= 1}`)
+    if(life === 0){
        alert('get out my face loser')
    }
    
-//correct letters/win
 
-let letters = $('.userLetters').children().text()
 
+   //correct letters/win
+//working alert winning message
+    var letters = $('.userLetters').children().text()
+    var finishMessage = $('.finishMessage').text()
     if(letters === word){
         alert("you win")
-    }  
-   
+    }
+
 
 })
+
+
+
 
 
 
