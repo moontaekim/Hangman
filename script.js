@@ -1,83 +1,102 @@
-const capitolArray = ["ATLANTA", "CHICAGO", "PHEONIX", "JACKSON", "TRENTON"]
+// const capitolArray = ["ATLANTA", "CHICAGO", "PHEONIX", "JACKSON", "TRENTON"]
 
-const createRandomCapitol = () => {
+// const createRandomCapitol = () => {
 
-    const randomCapitolNumber = Math.floor(Math.random() * capitolArray.length)
-    const randomCapitol = capitolArray[randomCapitolNumber]
-    return randomCapitol.split('')
+//     const randomCapitolNumber = Math.floor(Math.random() * capitolArray.length)
+//     const randomCapitol = capitolArray[randomCapitolNumber]
+//     return randomCapitol.split('')
 
-    //$(`<div>${randomCapitol}</div>`).appendTo('.userLetters')
-    //now add this capitolDiv to the HTML
-}   
+//     //$(`<div>${randomCapitol}</div>`).appendTo('.userLetters')
+//     //now add this capitolDiv to the HTML
+// }   
 
-//createRandomCapitol()
-console.log(createRandomCapitol())
+// //createRandomCapitol()
+// console.log(createRandomCapitol())
 
-var letterSelect = console.log(document.querySelector('.letterList').innerText.split(''))
-
-
-
+// //var letterSelect = console.log(document.querySelector('.letterList').innerText.split(''))
+// var letterSelect = console.log($('.letterList').text().split(''))
 
 
 
 
 
 
-//var word = "ATLANTA"
+
+
+
+
+var word = "WORLD"
+var wordArr = word.split('')
 
 $(() => {
-   
-//correct letters replacing userLetters
 
-$('.A').on('click', ()=>{
-        //console.log('user selected A')
-    $('.firstLetter, .fourthLetter, .seventhLetter').replaceWith($('.A'));
-    //the win and loss function should be called in each of these
+    
+    //take wordArr and insert divs = to length of wordArr
+    for(let i = 0; i < wordArr.length; i++){
+        $newDiv = $('<div ></div>', {'class': wordArr[i], text: '_' } )
+       // $newDiv = $('<div ></div>', {'class': wordArr[i], text: wordArr.indexOf(wordArr[i]) } )
+        $('.userLetters').append($newDiv)
+
+    }  
+
+    //losing function//
+    $('.letterList').on('click', ($event) => {
+        var letterSelect = $event.target.innerHTML
+        if(word.indexOf(letterSelect.toLowerCase()) === -1){
+            var life = $('.life').text()
+            $('.life').html(`${life -= 1}`)
         
-})
-    
-$('.T').on('click', ()=>{
-       // console.log('user selected T')
-    $('.secondLetter, .sixthLetter').replaceWith($('.T'));
-    
-})
-    
-$('.L').on('click', ()=>{
-        //console.log('user selected L')
-    $('.thirdLetter').replaceWith($('.L'));
-    
-})
-    
-$('.N').on('click', ()=>{
-       // console.log('user selected N')
-     $('.fifthLetter').replaceWith($('.N'));
-    
+        if (life === 0) {
+            alert('get out my face loser')
+
+        }}
+    })
+
+ //winning funciton//
+    $('.letterList').on('click', () => {
+        var letters = $('.userLetters').children().text()
+        var finishMessage = $('.finishMessage').text()
+        if (letters === word) {
+            $('.finishMessage').html("YOU WIN YOU BIG LOSER")
+            alert("you win")
+        }
+    })
 })
 
-    
-   
+    //letters selected//
+    // $('.letterList').on('click', ($letterSelected) => {
+    //     var letterSelected = $letterSelected.target.innerHTML
+    //     if(letterSelected = valueofclass...)
+    //     $('.letterList')
 
-//incorrect letters chosen
-//how do i name these functions? 
-//how do i call this function is every letter click above?
-$('.B, .C, .D, .E, .F, .G, .H, .I, .J, .K, .M, .O, .P, .Q, .R, .S, .U, .V, .W, .X, .Y, .Z').on('click', ()=>{
-    var life = $('.life').text()
-    $('.life').html(`${life -= 1}`)
-    if(life === 0){
-       alert('get out my face loser')
-   }
-   
+    // })
 
+// $('.A').on('click', ()=>{
+//         //console.log('user selected A')
+//     $('.firstLetter, .fourthLetter, .seventhLetter').replaceWith($('.A'));
+//     win()
+//     lose()
+//     //the win and loss function should be called in each of these
 
-   //correct letters/win
-//working alert winning message
-    var letters = $('.userLetters').children().text()
-    var finishMessage = $('.finishMessage').text()
-    if(letters === word){
-        $('.finishMessage').html("YOU WIN YOU BIG LOSER")
-        alert("you win")
-    }
-})
-});
+// })
 
+// $('.T').on('click', ()=>{
+//        // console.log('user selected T')
+//     $('.secondLetter, .sixthLetter').replaceWith($('.T'));
+//    win()
+//    lose()
+// })
 
+// $('.L').on('click', ()=>{
+//         //console.log('user selected L')
+//     $('.thirdLetter').replaceWith($('.L'));
+//    win()
+//    lose()
+// })
+
+// $('.N').on('click', ()=>{
+//        // console.log('user selected N')
+//      $('.fifthLetter').replaceWith($('.N'));
+//     win()
+//     lose()
+// })
