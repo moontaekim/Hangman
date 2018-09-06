@@ -1,8 +1,10 @@
 body {
     height: 100vh;
-    background-image: url("/images/Chat_background.png");
     background-size: cover;
     text-align: center;
+    background-image: url("/images/Chat_background.png"); 
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
 }
 
 .letterCenter{
@@ -60,3 +62,29 @@ span {
     padding-right: 10px;
     color: white;
 }
+
+#heroImage {
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url();
+    position: absolute;
+    opacity: 0.8;
+    filter: grayscale(30%);
+    display: none;
+}
+#heroImageLose {
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url();
+    position: absolute;
+    opacity: 0.8;
+    filter: grayscale(30%);
+    display: none;
+}
+
+#loseMessage {
+    font-size: 200px;
+    position: absolute;
+}
+
+
