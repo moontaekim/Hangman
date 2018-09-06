@@ -1,26 +1,17 @@
-const capitolArray = ["ATLANTA", "CHICAGO", "PHEONIX", "JACKSON", "TRENTON"]
+const marvelHerosArray = ["ANTMAN", "IRONMAN", "HULK", "BLACKWIDOW", "SPIDERMAN", "GROOT", "STARLORD", "BLACKPANTHER", "VISION", "THOR", "CAPTAINAMERICA"]
 
-const createRandomCapitol = () => {
+const createRandomHero = () => {
 
-    const randomCapitolNumber = Math.floor(Math.random() * capitolArray.length)
-    const randomCapitol = capitolArray[randomCapitolNumber]
-    return randomCapitol
+    const randomHerolNumber = Math.floor(Math.random() * marvelHerosArray.length)
+    const randomHero = marvelHerosArray[randomHerolNumber]
+    return randomHero
 
 
-    //$(`<div>${randomCapitol}</div>`).appendTo('.userLetters')
-    //now add this capitolDiv to the HTML
 }   
 
-//createRandomCapitol()
 
 
-//var letterSelect = console.log(document.querySelector('.letterList').innerText.split(''))
-//var letterSelect = console.log($('.letterList').text().split(''))
-
-
-
-
-var word = createRandomCapitol()
+var word = createRandomHero()
 console.log(word)
 
 $(() => {
@@ -31,6 +22,15 @@ $(() => {
         $newDiv = $('<div></div>', {'class': word[i], text:'_' } )
         $('.userLetters').append($newDiv)
     }  
+
+ //letters selected//
+    $('.letterList').on('click', ($letterSelected) => {
+        var letterSelected = $letterSelected.target.innerHTML
+
+        if(word.includes(letterSelected) === true){
+            $(`.${letterSelected}`).replaceWith(`<div>${letterSelected}</div>`) 
+
+        }
 
 //losing function//
     $('.letterList').on('click', ($event) => {
@@ -56,14 +56,7 @@ $(() => {
     })
 })
 
-//letters selected//
-    $('.letterList').on('click', ($letterSelected) => {
-        var letterSelected = $letterSelected.target.innerHTML
 
-        if(word.includes(letterSelected) === true){
-            $(`.${letterSelected}`).replaceWith(`${letterSelected}`) 
-
-        }
     })
 
 

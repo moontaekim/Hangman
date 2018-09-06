@@ -5,13 +5,16 @@ body{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 20% 20% 20% 20% 20%;
+    background-image: url("/images/marvelbrick_post_master_0.jpg");
+    background-size: cover;
+    
     
 }
 
 div.letterList{
     display:grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows:20% 20% 20% 20% 20% ;
+    grid-template-rows:repeat(6, 1fr);
     text-align: center;
 }
 
@@ -25,4 +28,10 @@ div.letterList{
     display:grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 100%;
+}
+
+.ui.huge.header {
+    min-height: 1em;
+    font-size: 6em;
+    text-align: center;
 }
