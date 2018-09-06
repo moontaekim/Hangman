@@ -84,7 +84,10 @@ $(() => {
             if (life === 0) {
                 $('.countdown').append($("<img>", {id: "heroImageLose", src:"https://vignette.wikia.nocookie.net/deathbattlefanon/images/0/06/Thanos.png/revision/latest/scale-to-width-down/2000?cb=20150701054527"}))
                 $('#heroImageLose').css("display", "initial")
-                $('.countdown').append("<div id='loseMessage'></div>")
+                $('.countdown').append("<div id='endMessage'>YOU ARE DOOMED!</div>")
+                $('#endMessage').animate({left: '250px', height: '200px', width: '150px'})
+                $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
+                
             }
         }
     })
@@ -95,6 +98,11 @@ $(() => {
         if (letters == word) {
             $('.finishMessage').html("YOU WIN YOU BIG LOSER")
             $('#heroImage').css("display", "initial")
+            $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
+            $('.countdown').append("<div id='endMessage'>You Win</div>")
+            $('#endMessage').animate({left: '250px', height: '200px', width: '150px'})
+
+
         }
     })
 })

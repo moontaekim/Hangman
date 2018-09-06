@@ -82,9 +82,11 @@ span {
     display: none;
 }
 
-#loseMessage {
-    font-size: 200px;
+#endMessage {
+    font-size: 10vw;
     position: absolute;
+    color: white;
+     
 }
 
 
