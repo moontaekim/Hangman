@@ -95,7 +95,6 @@ $(() => {
         var letters = $('.userLetters').text()
         var finishMessage = $('.finishMessage').text()
         if (letters == word) {
-            // $('.finishMessage').html("YOU WIN YOU BIG LOSER")
             $('#heroImage, .restart').css("display", "initial")
             $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
             $('.countdown').append("<div id='endMessage'>You Win</div>")
@@ -109,10 +108,7 @@ $(() => {
                 location.reload()
             })
         }
-    })
-
-    $('.letterList').on('click', ($event) => {
-        var letterSelected = $event.target.innerHTML
         $(".letterUsed").append(`<div>${letterSelected}</div>`)
     })
+
 })

@@ -13,4 +13,4 @@ https://github.com/moontaekim/Hangman/blob/master/images/wire%20frame
 
 Tech used: HTML, CSS, jQuery
 
-Version 2: i would like to add a restart button and also include hints.
+Version 2: include hints after 3 guesses
