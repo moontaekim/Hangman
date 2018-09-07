@@ -100,14 +100,14 @@ span {
     color: white;
     display: flex;
     position: absolute;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 25px;
     border: solid white;
     border-width: 1px;
     padding: 1vh 1vw;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    letter-spacing: 3px;
 }
 
-.letterUsedFlex {
-    display: flex;
-    flex-direction: row-reverse;
-}
+

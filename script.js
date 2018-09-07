@@ -51,15 +51,12 @@ const createRandomHero = () => {
     heroImageDiv.setAttribute("src", `${randomHero.img}`)
     $('.countdown').append(`<img id= "heroImage" src=${randomHero.img}>`)
     return randomHero
-
 }
-
 
 var word = createRandomHero().hero
 console.log(word)
 
 $(() => {
-
     //take wordArr and insert divs = to length of wordArr
     for (let i = 0; i < word.length; i++) {
         $newDiv = $('<div></div>', {
@@ -73,40 +70,42 @@ $(() => {
         var letterSelected = $event.target.innerHTML
         if (word.includes(letterSelected) === true) {
             $(`.${letterSelected}`).replaceWith(`<div>${letterSelected}</div>`)
-        }
-    })
-    //losing function//
-    $('.letterList').on('click', ($event) => {
-        var letterSelect = $event.target.innerHTML
-        if (word.indexOf(letterSelect) === -1) {
+        } else if (word.indexOf(letterSelected) === -1) {
             var life = $('.life').text()
             $('.life').html(`${life -= 1}`)
             if (life === 0) {
-                $('.countdown').append($("<img>", {id: "heroImageLose", src:"https://vignette.wikia.nocookie.net/deathbattlefanon/images/0/06/Thanos.png/revision/latest/scale-to-width-down/2000?cb=20150701054527"}))
+                $('.countdown').append($("<img>", {
+                    id: "heroImageLose",
+                    src: "https://vignette.wikia.nocookie.net/deathbattlefanon/images/0/06/Thanos.png/revision/latest/scale-to-width-down/2000?cb=20150701054527"
+                }))
                 $('#heroImageLose').css("display", "initial")
                 $('.countdown').append("<div id='endMessage'>YOU ARE DOOMED!</div>")
-                $('#endMessage').animate({left: '250px', height: '200px', width: '150px'})
+                $('#endMessage').animate({
+                    left: '250px',
+                    height: '200px',
+                    width: '150px'
+                })
                 $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
                 $('.livesRemaining, .letterUsed').css("display", "none")
-
             }
         }
-    })
-    //winning funciton//
-    $('.letterList').on('click', () => {
         var letters = $('.userLetters').text()
         var finishMessage = $('.finishMessage').text()
         if (letters == word) {
-            $('.finishMessage').html("YOU WIN YOU BIG LOSER")
+            // $('.finishMessage').html("YOU WIN YOU BIG LOSER")
             $('#heroImage').css("display", "initial")
             $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
             $('.countdown').append("<div id='endMessage'>You Win</div>")
-            $('#endMessage').animate({left: '250px', height: '200px', width: '150px'})
+            $('#endMessage').animate({
+                left: '250px',
+                height: '200px',
+                width: '150px'
+            })
             $('.livesRemaining, .letterUsed').css("display", "none")
-
-
         }
     })
+
+
 
     $('.letterList').on('click', ($event) => {
         var letterSelected = $event.target.innerHTML
