@@ -2,7 +2,7 @@ HANGMAN PROJECT
 
 ##Overview##
 
-This game is an interpretation of hangman. The theme is Marvel superheros. There are 11 heros fighting against Thanos, the super villan that is trying to obtain all of the infiniti stones. Guess the name of the hero that will be the one to take down Thanos once and for all. Be careful, you only have 6 lives! Dont worry if you lose, you have stolen the time stone and can activate it by clicking "time stone"
+This game is an interpretation of hangman. The theme is Marvel superheros. There are 11 heros fighting against Thanos, the super villan that is trying to obtain all of the infiniti stones. Guess the name of the hero that will be the one to take down Thanos once and for all. Be careful, you only have 6 lives! Dont worry if you lose, you have stolen the time stone and can activate it by clicking "activate time stone"
 
 
 ##accomplishment##
