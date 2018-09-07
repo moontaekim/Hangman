@@ -107,4 +107,5 @@ span {
     text-decoration: underline;
     padding-left: 20px;
     color: greenyellow;
+    position: absolute;
 }
