@@ -97,7 +97,7 @@ $(() => {
         if (letters == word) {
             $('#heroImage, .restart').css("display", "initial")
             $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
-            $('.countdown').append("<div id='endMessage'>You Win</div>")
+            $('.countdown').append("<div id='endMessage'>You Defeated Thanos</div>")
             $('#endMessage').animate({
                 left: '250px',
                 height: '200px',

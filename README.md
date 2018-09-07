@@ -5,15 +5,24 @@ HANGMAN PROJECT
 This game is an interpretation of hangman. The theme is Marvel superheros. There are 11 heros fighting against Thanos, the super villan that is trying to obtain all of the infiniti stones. Select a letter, until you complete the name, to guess which hero will be the one to take down Thanos once and for all. Be careful, you only have 6 lives! Dont worry if you lose, you have stolen the time stone and can activate it by clicking "time stone"
 
 
-Link to Game
-https://tender-payne-e1e8ea.netlify.com/
+##accomplishment##
+I was able to randomize the hero names and winning images by using an array of objects. Correctly displaying the number of underscores.
 
-Link to Trello
+##struggles##
+Selecting a random answer from the array was difficult.
+I had a hard time making the game mobile friendly.
+
+##Link to Game##
+https://jovial-morse-8b607a.netlify.com/
+
+##Link to Trello##
 https://trello.com/b/F7QuKebu/hangman
 
-Wire-Frame
+##Wire-Frame##
 https://github.com/moontaekim/Hangman/blob/master/images/wire%20frame
 
-Tech used: HTML, CSS, jQuery
+##Tech used## 
+HTML, CSS, javascript, jQuery, google fonts, visual studio code, Trello
 
-Version 2: include hints after 3 guesses
+##new features## 
+include hints after certain amount of guesses or have a silhouette of the hero in the background. I want the letters selected to disappear after they have been used. I would also like to make the game respond to key presses.
