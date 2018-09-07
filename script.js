@@ -78,7 +78,7 @@ $(() => {
                     id: "heroImageLose",
                     src: "https://vignette.wikia.nocookie.net/deathbattlefanon/images/0/06/Thanos.png/revision/latest/scale-to-width-down/2000?cb=20150701054527"
                 }))
-                $('#heroImageLose').css("display", "initial")
+                $('#heroImageLose, .restart').css("display", "initial")
                 $('.countdown').append("<div id='endMessage'>YOU ARE DOOMED!</div>")
                 $('#endMessage').animate({
                     left: '250px',
@@ -87,13 +87,16 @@ $(() => {
                 })
                 $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
                 $('.livesRemaining, .letterUsed').css("display", "none")
+                $('.restart').click(function () {
+                    location.reload()
+                })
             }
         }
         var letters = $('.userLetters').text()
         var finishMessage = $('.finishMessage').text()
         if (letters == word) {
             // $('.finishMessage').html("YOU WIN YOU BIG LOSER")
-            $('#heroImage').css("display", "initial")
+            $('#heroImage, .restart').css("display", "initial")
             $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
             $('.countdown').append("<div id='endMessage'>You Win</div>")
             $('#endMessage').animate({
@@ -102,15 +105,14 @@ $(() => {
                 width: '150px'
             })
             $('.livesRemaining, .letterUsed').css("display", "none")
+            $('.restart').click(function () {
+                location.reload()
+            })
         }
     })
-
-
 
     $('.letterList').on('click', ($event) => {
         var letterSelected = $event.target.innerHTML
         $(".letterUsed").append(`<div>${letterSelected}</div>`)
-
-
     })
 })

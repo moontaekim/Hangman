@@ -110,4 +110,8 @@ span {
     letter-spacing: 3px;
 }
 
-
+.restart{
+    display: none;
+    text-decoration: underline;
+    padding-left: 20px;
+}
