@@ -6,14 +6,14 @@ This game is an interpretation of hangman. The theme is Marvel superheros. There
 
 
 ##accomplishment##
-I was able to randomize the hero names and winning images by using an array of objects. Correctly displaying the number of underscores.
+I was able to randomize the hero names and winning images by using an array of objects. Correctly displaying the number of underscores according to length of hero names.
 
 ##struggles##
-Selecting a random answer from the array was difficult.
+Selecting a random answer from the array and using that to make the game work was difficult.
 I had a hard time making the game mobile friendly.
 
 ##Link to Game##
-https://jovial-morse-8b607a.netlify.com/
+https://elated-wozniak-878f5f.netlify.com/
 
 ##Link to Trello##
 https://trello.com/b/F7QuKebu/hangman
