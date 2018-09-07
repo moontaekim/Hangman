@@ -87,7 +87,8 @@ $(() => {
                 $('.countdown').append("<div id='endMessage'>YOU ARE DOOMED!</div>")
                 $('#endMessage').animate({left: '250px', height: '200px', width: '150px'})
                 $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
-                
+                $('.livesRemaining, .letterUsed').css("display", "none")
+
             }
         }
     })
@@ -101,8 +102,16 @@ $(() => {
             $('.letterList, .userLetters, .life, .lifepic, .x').css("display", "none")
             $('.countdown').append("<div id='endMessage'>You Win</div>")
             $('#endMessage').animate({left: '250px', height: '200px', width: '150px'})
+            $('.livesRemaining, .letterUsed').css("display", "none")
 
 
         }
+    })
+
+    $('.letterList').on('click', ($event) => {
+        var letterSelected = $event.target.innerHTML
+        $(".letterUsed").append(`<div>${letterSelected}</div>`)
+
+
     })
 })
