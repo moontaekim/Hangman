@@ -2,8 +2,7 @@ This game is an interpretation of hangman. The theme is Marvel super heros. Ther
 
 
 Link to Game
-http://sleepy-wing-6c33a1.netlify.com/
-
+https://tender-payne-e1e8ea.netlify.com/
 
 Link to Trello
 https://trello.com/b/F7QuKebu/hangman
